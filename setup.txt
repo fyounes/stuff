@@ -1,0 +1,45 @@
+1) Install cygwin
+
+2) SSH dir
+      mkdir -p /cygdrive/d/Apps/cwRsync_5.5.0_x86_Free/home/Federico/.ssh
+      cd /cygdrive/d/Apps/cwRsync_5.5.0_x86_Free/home/Federico
+      -- Extract keys here
+      chmod 700 .ssh
+      cd .ssh
+      chgrp Users *
+      chmod 600 id_rsa config
+
+3) Test ssh
+      cd D:\Apps\cwRsync_5.5.0_x86_Free
+      bin\ssh -i home\Federico\.ssh\id_rsa -p 1526 federico@diskstation
+
+4) Login to diskstation (\\diskstation as user diskstation/federico) - Set it to save credentials
+
+5) Schedule (python_interpreter as program, script as arg)
+
+#####
+Working on rsync via python so I wouldn't have to install cygwin
+
+
+###################################################
+Setting up WinPython (If I want to upgrade python)
+###################################################
+
+1) Install winpython (winpython.github.io)
+
+2) Install rsync package (pip install rsync.py) -- NOT WORKING
+
+3) Register WinPython
+   - Go to WinPython directory
+   - WinPython Control Panel
+   - Advanced -> Register distribution
+
+4) Upgrade Packages (optional)
+    - pip install pip-review
+    - pip-review --local --interactive
+
+###################################################
+Setting up PyCharm
+###################################################
+
+1) Add interpreter from above
